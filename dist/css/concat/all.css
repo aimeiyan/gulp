@@ -1,0 +1,451 @@
+.sass a {
+    color: pink;
+}
+
+.import a {
+    color: red;
+}
+
+@charset "utf-8";
+/*浏览历史记录*/
+.jh-modal-box {
+    z-index: 10;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 880px;
+    border: 1px solid #3c6da8;
+    display: none;
+    background-color: #f0f5f9;
+}
+.jh-modal-box .jh-modal-header {
+    height: 32px;
+    line-height: 32px;
+    position: relative;
+    background: url(../images/modal_header_bg.png) repeat-x 0 0;
+}
+.jh-modal-box .jh-modal-header .jh-modal-title {
+    margin-left: 16px;
+    font-size: 20px;
+}
+.jh-modal-box .jh-modal-header .jh-modal-close {
+    display: block;
+    width: 18px;
+    height: 18px;
+    line-height: 19px;
+    position: absolute;
+    top: 2px;
+    right: 18px;
+    background-color: #3d6ba7;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5px;
+}
+.jh-modal-box .jh-modal-body {
+    background-color: #f0f5f9;
+}
+.jh-view-history-modal .jh-modal-content {
+    padding: 0 20px;
+}
+.jh-compare-recent-people .jh-view-more {
+    text-align: center;
+    margin: 15px 0 0;
+}
+
+.jh-compare-recent-people .jh-view-more a {
+    font-size: 18px;
+    color: #2d6cad;
+}
+
+.jh-view-history-modal {
+    width: 1030px;
+    height: 700px;
+    margin-left: -500px;
+    margin-top: -350px;
+}
+
+.jh-view-history-modal .jh-view-history-time-first-ul {
+    height: 450px;
+    /*overflow-y: auto;*/
+}
+
+.jh-view-history-modal .jh-view-history-time-first-ul .jh-ul-title {
+    position: relative;
+    padding-left: 70px;
+    line-height: 2.5;
+    cursor: pointer;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+}
+
+.jh-view-history-modal .jh-view-history-time-first-ul .jh-angle-icon {
+    position: absolute;
+    display: block;
+    left: 18px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-left: 6px solid #8c8f95;
+    margin-top: -6px;
+}
+
+.jh-view-history-modal .jh-view-history-time-first-ul li.active .jh-ul-title .jh-angle-icon {
+    border-left: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #2d6cad;
+    left: 12px;
+}
+
+.jh-view-history-modal .jh-time-icon {
+    position: absolute;
+    display: block;
+    width: 22px;
+    height: 22px;
+    background: url(../images/icon-time.png) no-repeat 0 0;
+    left: 36px;
+    top: 50%;
+    margin-top: -10px;
+}
+
+.jh-view-history-modal .jh-view-history-time-second-ul li {
+    display: table;
+    width: 100%;
+    /*padding-left: 28px;*/
+    border-bottom: 1px dashed #ddd;
+    font-size: 18px;
+}
+
+.jh-view-history-modal .jh-view-history-time-second-ul li:last-child {
+    border-bottom: 0;
+}
+
+.jh-view-history-modal .jh-view-history-time-second-ul li > span {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 10px;
+}
+
+.jh-view-history-modal .jh-view-history-time-second-ul li > span:nth-child(1) {
+    width: 18%;
+}
+
+.jh-view-history-modal .jh-view-history-time-second-ul li > span:nth-child(2) {
+    width: 26%;
+}
+
+.jh-view-history-modal .jh-view-history-time-second-ul li > span:nth-child(3) {
+    width: 25%;
+}
+
+.jh-view-history-modal .jh-view-history-time-second-ul li .jh-view-portrait {
+    position: relative;
+    padding-left: 92px;
+    cursor: pointer;
+    height: 70px;
+    line-height: 70px;
+}
+
+.jh-view-history-modal .jh-view-history-time-second-ul li .jh-view-portrait img {
+    width: 48px;
+    height: 48px;
+    display: block;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    margin-top: -24px;
+}
+
+.jh-view-history-modal .jh-view-history-time-second-ul li .jh-name {
+    color: #2d6cad;
+}
+
+.jh-view-history-modal .jh-view-history-time-second-ul li .jh-name:hover {
+    text-decoration: underline;
+}
+
+.jh-view-history-modal .jh-modal-content {
+    padding: 0 20px;
+}
+
+.jh-view-history-modal .jh-view-history-time-second-ul {
+    display: none;
+}
+
+.jh-view-history-modal .jh-view-history-time-first-ul li.active .jh-ul-title {
+    color: #2d6cad;
+}
+
+.jh-view-history-modal .jh-view-history-time-first-ul li.active .jh-ul-title .jh-time-icon {
+    background-position: -41px 0;
+}
+
+.jh-view-history-modal .jh-modal-footer {
+    text-align: center;
+}
+
+.jh-view-history-modal .jh-modal-btn-cancel {
+    width: 90px;
+    height: 42px;
+    background: url("../images/btn_close.jpg") no-repeat 0 0;
+}
+
+.jh-view-history-modal .jh-view-history-time-table-title li {
+    float: left;
+    padding: 10px;
+    color: #777;
+    font-size: 16px;
+}
+
+.jh-view-history-modal .jh-view-history-time-table-title li:nth-child(1) {
+    width: 66%;
+}
+
+.jh-view-history-modal .jh-view-history-time-table-title li:nth-child(1) span {
+    padding-left: 20px;
+}
+
+/*按次数查询*/
+.jh-view-history-modal .jh-view-history-number-second-ul {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+}
+
+.jh-view-history-modal .jh-view-history-number-second-ul li {
+    display: table;
+    width: 100%;
+    border-bottom: 1px dashed #ddd;;
+}
+
+.jh-view-history-modal .jh-view-history-number-second-ul li:last-child {
+    border-bottom: 0;
+}
+
+.jh-view-history-modal .jh-view-history-number-second-ul li > span {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 10px;
+}
+
+.jh-view-history-modal .jh-view-history-number-second-ul li > span:nth-child(1) {
+    width: 16%;
+}
+
+.jh-view-history-modal .jh-view-history-number-second-ul li > span:nth-child(2) {
+    width: 26%;
+}
+
+.jh-view-history-modal .jh-view-history-number-second-ul li > span:nth-child(3) {
+    width: 25%;
+}
+
+.jh-view-history-modal .jh-view-history-number-second-ul li .jh-view-portrait {
+    position: relative;
+    padding-left: 82px;
+    cursor: pointer;
+    height: 70px;
+    line-height: 70px;
+}
+
+.jh-view-history-modal .jh-view-history-number-second-ul li .jh-view-portrait img {
+    width: 48px;
+    height: 48px;
+    display: block;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    margin-top: -24px;
+}
+
+.jh-view-history-modal .jh-view-history-number-second-ul li .jh-name {
+    color: #2d6cad;
+}
+
+.jh-view-history-modal .jh-view-history-number-second-ul li .jh-name:hover {
+    text-decoration: underline;
+}
+
+.jh-view-history-modal .jh-view-history-number-table-title li {
+    float: left;
+    padding: 10px 0;
+    color: #777;
+    font-size: 16px;
+}
+
+.jh-view-history-modal .jh-view-history-number-table-title li:nth-child(1) {
+    width: 67%;
+}
+
+.jh-view-history-modal .jh-view-history-number-table-title li:nth-child(1) span {
+    padding-left: 20px;
+}
+
+.jh-view-history-modal .jh-view-history-number-second-ul {
+    height: 460px;
+    /*overflow-y: auto;*/
+}
+
+.jh-view-history-modal .jh-view-history-pages {
+    display: inline-block;
+    float: left;
+}
+
+.jh-view-history-modal .jh-view-history-pages li {
+    float: left;
+    margin-right: 5px;
+}
+
+.jh-view-history-modal .jh-view-history-pages li a {
+    display: block;
+    padding: 5px 14px;
+    background-color: #fff;
+    border-radius: 6px;
+    color: #333;
+    font-size: 16px;
+}
+
+.jh-view-history-modal .jh-view-history-pages li.active a {
+    background-color: #4385f5;
+    color: #fff;
+}
+
+.jh-view-history-modal .jh-modal-footer {
+    text-align: center;
+}
+
+.jh-view-history-modal .jh-modal-footer .jh-go-page {
+    width: 40px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.jh-view-history-modal .jh-modal-footer .jh-go-action {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.jh-view-history-modal .jh-modal-footer .jh-go-wrp {
+    display: inline-block;
+    float: left;
+    font-size: 16px;
+}
+
+.jh-view-history-modal .jh-modal-footer .jh-pages-container {
+    display: none;
+}
+
+.jh-view-history-modal .jh-modal-footer .jh-pages-wrp {
+    text-align: center;
+    display: inline-block;
+}
+
+.jh-view-history-modal .jh-modal-footer {
+    padding: 15px 0;
+}
+
+.jh-view-history-modal .jh-modal-footer .jh-pages-container {
+    margin-bottom: 10px;
+}
+
+.jh-view-history-modal .jh-select-view-wrp {
+    width: 400px;
+    height: 42px;
+    position: relative;
+    border-radius: 6px;
+    margin: 20px 10px;
+    font-size: 18px;
+    z-index: 2;
+    background-color: #fff;
+}
+
+.jh-view-history-modal .jh-select-view-wrp .jh-select-view-type {
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    box-sizing: border-box;
+    padding-right: 36px;
+    padding-left: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+
+.jh-view-history-modal .jh-select-view-wrp .jh-angle-down-wrp {
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    border: 1px solid #2d6cad;
+    right: 0;
+    top: 0;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    /*z-index: -1;*/
+}
+
+.jh-view-history-modal .jh-select-view-wrp .jh-angle-down-wrp .jh-angle-down-icon {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -6px;
+    margin-top: -2px;
+    border-left: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #2d6cad;
+}
+
+.jh-view-history-modal .jh-select-list {
+    position: absolute;
+    width: 100%;
+    top: 42px;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    display: none;
+}
+
+.jh-view-history-modal .jh-select-list li {
+    line-height: 3;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.jh-view-history-modal .jh-select-list li:hover {
+    background: #4385f5;
+    color: #fff;
+    cursor: pointer;
+}
+
+.jh-view-history-modal .jh-select-list li:nth-child(1):hover {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.jh-view-history-modal .jh-select-list li:nth-child(2):hover {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.jh-view-history-modal .jh-view-history-tab {
+    display: none;
+}
+

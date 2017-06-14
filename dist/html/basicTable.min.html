@@ -1,0 +1,45 @@
+<!DOCTYPE html><html><head lang=en><meta charset=UTF-8><title></title><style>
+        body {
+            position: relative;
+            width: 1178px;
+            margin: 0 auto;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        .jh-staffView-click {
+            position: absolute;
+            width: 73px;
+            height: 28px;
+            top: 17px;
+            right: 220px;
+            background: url("../images/btn_fullView.jpg") no-repeat 0 0;
+            cursor: pointer;
+        }
+
+        .jh-staffView-click a {
+            color: #fff;
+            font-size: 12px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style></head><body><img src=../images/basic_table.jpg alt=基本情况表><div class=jh-staffView-click></div><script type=text/javascript src=../js/jquery-1.8.3.js></script><script>
+    $(function () {
+        //点击员工照片打开全景视图页面
+        function openWin(url, iWidth, iHeight) {
+            var name = 'add';                            //网页名称，可为空;
+            //获得窗口的垂直位置
+            var iTop = (window.screen.availHeight - 30 - iHeight) / 2;
+            //获得窗口的水平位置
+            var iLeft = (window.screen.availWidth - 10 - iWidth) / 2;
+            window.open(url, name, 'height=' + iHeight + ',,innerHeight=' + iHeight + ',width=' + iWidth + ',innerWidth=' + iWidth + ',top=' + iTop + ',left=' + iLeft + ',status=no,toolbar=no,menubar=no,location=no,resizable=yes,scrollbars=yes,titlebar=no');
+        }
+
+        $(".jh-staffView-click").click(function () {
+            openWin("staffFullView.html", 1000, 1000);
+        })
+    })
+</script></body></html>
