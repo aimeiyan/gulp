@@ -236,11 +236,10 @@ gulp.task('default', ['sass','minify-css', 'minify-html','minify-js','jsLint','c
 使用gulp-livereload插件，安装:```npm install --save-dev gulp-livereload```。<br>
 当代码变化时，它可以帮我们自动刷新页面<br>
 该插件最好配合谷歌浏览器来使用，且要安装livereload chrome extension扩展插件,不能下载的请自行FQ。<br>
-```
-// 在命令行输入 gulp watch 启动此任务
 可以用intellijIdea见http服务器，点击![](https://github.com/aimeiyan/gulp/blob/master/liveReload_01.png)  
 为实心![](https://github.com/aimeiyan/gulp/blob/master/liveReload_02.png)就可以自动刷新了
-
+```
+// 在命令行输入 gulp watch 启动此任务
 // 自动刷新
 // refresh-sass和watch，chrome浏览器安装
 gulp.task('refresh-sass', function() {
