@@ -52,6 +52,7 @@ gulp.task('default', function() {
 -----
 sass使用gulp-sass,安装：npm install --save-dev gulp-sass
 
+```
 var gulp = require('gulp'),
     sass = require("gulp-sass");
  
@@ -64,7 +65,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('default', ['sass']);
-
+```
 7、css压缩
 -----
 安装：npm install --save-dev gulp-rename
