@@ -38,11 +38,11 @@ gulp学习笔记
 
 gulp.task('default', function() {
   // 将你的默认的任务代码放在这
-});```
+});
+```
 
 目录结构是这样子的：
-```
-    ├── gulpfile.js
+```├── gulpfile.js
     ├── node_modules
     │ └── gulp
     └── package.json
