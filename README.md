@@ -42,10 +42,10 @@ gulp.task('default', function() {
 
 目录结构是这样子的：
 ```
-├── gulpfile.js
-├── node_modules
-│ └── gulp
-└── package.json
+    ├── gulpfile.js
+    ├── node_modules
+    │ └── gulp
+    └── package.json
 ```
 
 6、sass的编译css
@@ -107,7 +107,7 @@ gulp.task('default', ['sass','minify-css', 'minify-html']);```
 9、 js文件压缩
 -----
 使用gulp-uglify
-安装：npm install --save-dev gulp-uglify
+安装：```npm install --save-dev gulp-uglify```
 用来压缩js文件，使用的是uglify引擎
 ```var gulp = require('gulp');
 var rename = require("gulp-rename");
@@ -139,21 +139,21 @@ gulp.task('default', ['sass','minify-css', 'minify-html','minify-js','jsLint']);
 
 运行gulp jsLint时，可能会出现下面的问题
 
-Gulp Error: Cannot find module 'jshint/src/cli'
+```Gulp Error: Cannot find module 'jshint/src/cli'```
 
 问题原因：
 插件安装不完全，新版本gulp做了一些调整好像。。。。
 
 
 解决方法：
-使用npm install --save-dev jshint gulp-jshint
+使用```npm install --save-dev jshint gulp-jshint```
 而不是npm install --save-dev gulp-jshint
 
 11、合并css
 -----
 // css文件合并
 使用gulp-concat
-安装：npm install --save-dev gulp-concat
+安装：```npm install --save-dev gulp-concat```
 用来把多个文件合并为一个文件,我们可以用它来合并js或css文件等，这样就能减少页面的http请求数了
 
 ```var gulp = require('gulp');
@@ -176,7 +176,7 @@ gulp.task('default', ['sass','minify-css', 'minify-html','minify-js','jsLint','c
 -----
  // js文件合并
 使用gulp-concat
-安装：npm install --save-dev gulp-concat
+安装：```npm install --save-dev gulp-concat```
 用来把多个文件合并为一个文件,我们可以用它来合并js或css文件等，这样就能减少页面的http请求数了
 
 ```var gulp = require('gulp');
@@ -196,8 +196,8 @@ gulp.task('default', ['sass','minify-css', 'minify-html','minify-js','jsLint','c
 
 13、图片压缩
 -----
-npm install --save-dev gulp-imagemin
-npm install --save-dev imagemin-pngquant
+```npm install --save-dev gulp-imagemin```
+```npm install --save-dev imagemin-pngquant```
 
 ```var gulp = require('gulp');
 var imagemin = require('gulp-imagemin');
@@ -215,14 +215,14 @@ gulp.task('default', ['sass','minify-css', 'minify-html','minify-js','jsLint','c
 
 14、自动刷新
 -----
-使用gulp-livereload插件，安装:npm install --save-dev gulp-livereload。
+使用gulp-livereload插件，安装:```npm install --save-dev gulp-livereload```。
 当代码变化时，它可以帮我们自动刷新页面
 该插件最好配合谷歌浏览器来使用，且要安装livereload chrome extension扩展插件,不能下载的请自行FQ。
-// 在命令行输入 gulp watch 启动此任务
+```// 在命令行输入 gulp watch 启动此任务
 可以用idea见http服务器，点击为实心就可以自动刷新了
 // 自动刷新
 // refresh-sass和watch，chrome浏览器安装
-```gulp.task('refresh-sass', function() {
+gulp.task('refresh-sass', function() {
   gulp.src('dist/sass/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('dist/css'))
