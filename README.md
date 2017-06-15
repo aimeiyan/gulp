@@ -1,9 +1,9 @@
-# gulp
-
 gulp学习笔记
+==
 参考网址：http://www.cnblogs.com/2050/p/4198792.html
 
 1、查看是否安装npm
+-----
 npm -v
 
 如果你安装的是旧版本的 npm，可以通过 npm 命令来升级，命令如下：
@@ -13,9 +13,11 @@ $ sudo npm install npm -g
 npm install npm -g
 
 2、生成package.json文件
+-----
 $npm init 
 
 3、全局安装 gulp：
+-----
 $npm install --global gulp
 或
 $npm install -g gulp
@@ -27,9 +29,11 @@ gulp -v
 npm install gulp
 
 4、作为项目的开发依赖（devDependencies）安装：
+-----
 $ npm install --save-dev gulp
 
 5、 在项目根目录下创建一个名为 gulpfile.js 的文件：
+-----
 var gulp = require('gulp');
 
 gulp.task('default', function() {
@@ -43,6 +47,7 @@ gulp.task('default', function() {
 └── package.json
 
 6、sass的编译css
+-----
 sass使用gulp-sass,安装：npm install --save-dev gulp-sass
 
 var gulp = require('gulp'),
@@ -58,7 +63,8 @@ gulp.task('sass', function() {
 
 gulp.task('default', ['sass']);
 
-6、css压缩
+7、css压缩
+-----
 安装：npm install --save-dev gulp-rename
 var gulp = require('gulp');
 var rename = require("gulp-rename");
@@ -76,7 +82,8 @@ gulp.task('minify-css', function () {
 });
 gulp.task('default', ['sass','minify-css']);
 
-7、html文件压缩
+8、html文件压缩
+-----
 使用gulp-minify-html
 安装：npm install --save-dev gulp-minify-html  用来压缩html文件
 var gulp = require('gulp');
@@ -95,7 +102,8 @@ gulp.task('minify-html', function () {
 
 gulp.task('default', ['sass','minify-css', 'minify-html']);
 
-8、 js文件压缩
+9、 js文件压缩
+-----
 使用gulp-uglify
 安装：npm install --save-dev gulp-uglify
 用来压缩js文件，使用的是uglify引擎
@@ -116,7 +124,8 @@ gulp.task('minify-js', function () {
 gulp.task('default', ['sass','minify-css', 'minify-html','minify-js']);
 
 
-9、 js代码检查
+10、 js代码检查
+-----
 var gulp = require('gulp');
 var jsLint = require("gulp-jshint");
 gulp.task('jsLint', function () {
@@ -138,7 +147,8 @@ Gulp Error: Cannot find module 'jshint/src/cli'
 使用npm install --save-dev jshint gulp-jshint
 而不是npm install --save-dev gulp-jshint
 
-10、合并css
+11、合并css
+-----
 // css文件合并
 使用gulp-concat
 安装：npm install --save-dev gulp-concat
@@ -160,7 +170,8 @@ gulp.task('concat-css', function () {
 });
 gulp.task('default', ['sass','minify-css', 'minify-html','minify-js','jsLint','concat-css']);
 
-11、合并js
+12、合并js
+-----
  // js文件合并
 使用gulp-concat
 安装：npm install --save-dev gulp-concat
@@ -181,7 +192,8 @@ gulp.task('concat-js', function () {
 });
 gulp.task('default', ['sass','minify-css', 'minify-html','minify-js','jsLint','concat-css','concat-js']);
 
-12、图片压缩
+13、图片压缩
+-----
 npm install --save-dev gulp-imagemin
 npm install --save-dev imagemin-pngquant
 
@@ -199,7 +211,8 @@ gulp.task('minify-img', function () {
 });
 gulp.task('default', ['sass','minify-css', 'minify-html','minify-js','jsLint','concat-js','concat-css','minify-img']);
 
-13、自动刷新
+14、自动刷新
+-----
 使用gulp-livereload插件，安装:npm install --save-dev gulp-livereload。
 当代码变化时，它可以帮我们自动刷新页面
 该插件最好配合谷歌浏览器来使用，且要安装livereload chrome extension扩展插件,不能下载的请自行FQ。
@@ -222,7 +235,8 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['sass','minify-css', 'minify-html','minify-js','jsLint','concat-js','concat-css','minify-img','refresh-sass','watch']);
 
-14、监听sass编译任务
+15、监听sass编译任务
+-----
 // 在命令行使用 gulp auto 启动此任务
 gulp.task('auto', function () {
     // 监听文件修改，当文件被修改则执行此任务
