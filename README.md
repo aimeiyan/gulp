@@ -50,7 +50,8 @@ gulp.task('default', function() {
 
 6、sass的编译css
 -----
-sass使用gulp-sass,安装：npm install --save-dev gulp-sass
+sass使用gulp-sass,
+安装：npm install --save-dev gulp-sass
 
 ```var gulp = require('gulp'),
     sass = require("gulp-sass");
