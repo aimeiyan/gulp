@@ -1,6 +1,6 @@
 gulp学习笔记
 ==
-参考网址：http://www.cnblogs.com/2050/p/4198792.html
+参考网址：http://www.cnblogs.com/2050/p/4198792.html<br>
 
 1、查看是否安装npm
 -----
@@ -53,8 +53,8 @@ gulp.task('default', function() {
 sass使用gulp-sass,<br>
 安装：npm install --save-dev gulp-sass<br>
 
-```var gulp = require('gulp'),
-    sass = require("gulp-sass");
+```var gulp = require('gulp');
+   var sass = require("gulp-sass");
  
 // 编译sass
 // 在命令行输入 gulp sass 启动此任务
@@ -135,6 +135,7 @@ gulp.task('default', ['sass','minify-css', 'minify-html','minify-js']);
 -----
 ```var gulp = require('gulp');
 var jsLint = require("gulp-jshint");
+
 gulp.task('jsLint', function () {
     gulp.src('dist/js/*.js')
     .pipe(jshint())
@@ -204,7 +205,7 @@ gulp.task('default', ['sass','minify-css', 'minify-html','minify-js','jsLint','c
 
 13、图片压缩
 -----
-```npm install --save-dev gulp-imagemin```
+```npm install --save-dev gulp-imagemin```<br>
 ```npm install --save-dev imagemin-pngquant```
 
 ```var gulp = require('gulp');
