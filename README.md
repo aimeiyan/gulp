@@ -4,13 +4,13 @@ gulp学习笔记
 
 1、查看是否安装npm
 -----
-```npm -v```
+```npm -v```<br>
 
-如果你安装的是旧版本的 npm，可以通过 npm 命令来升级，命令如下：
-```$sudo npm install npm -g```
+如果你安装的是旧版本的 npm，可以通过 npm 命令来升级，命令如下：<br>
+```$sudo npm install npm -g```<br>
 
-如果是 Window 系统使用以下命令即可：
-```$npm install npm -g```
+如果是 Window 系统使用以下命令即可：<br>
+```$npm install npm -g```<br>
 
 2、生成package.json文件
 -----
@@ -18,14 +18,14 @@ gulp学习笔记
 
 3、全局安装 gulp：
 -----
-```$npm install --global gulp```
-或
-```$npm install -g gulp```
+```$npm install --global gulp```<br>
+或<br>
+```$npm install -g gulp```<br>
 
-查看gulp版本
-```gulp -v```
+查看gulp版本<br>
+```gulp -v```<br>
 
-全局安装gulp后，还需要在每个要使用gulp的项目中都单独安装一次。把目录切换到你的项目文件夹中，然后在命令行中执行：
+全局安装gulp后，还需要在每个要使用gulp的项目中都单独安装一次。把目录切换到你的项目文件夹中，然后在命令行中执行：<br>
 ```npm install gulp```
 
 4、作为项目的开发依赖（devDependencies）安装：
@@ -50,8 +50,8 @@ gulp.task('default', function() {
 
 6、sass的编译css
 -----
-sass使用gulp-sass,
-安装：npm install --save-dev gulp-sass
+sass使用gulp-sass,<br>
+安装：npm install --save-dev gulp-sass<br>
 
 ```var gulp = require('gulp'),
     sass = require("gulp-sass");
@@ -69,7 +69,7 @@ gulp.task('default', ['sass']);
 
 7、css压缩
 -----
-安装：npm install --save-dev gulp-rename
+安装：npm install --save-dev gulp-rename<br>
 ```var gulp = require('gulp');
 var rename = require("gulp-rename");
 
@@ -89,7 +89,7 @@ gulp.task('default', ['sass','minify-css']);
 
 8、html文件压缩
 -----
-使用gulp-minify-html
+使用gulp-minify-html<br>
 安装：npm install --save-dev gulp-minify-html  用来压缩html文件
 ```var gulp = require('gulp');
 var rename = require("gulp-rename");
@@ -110,9 +110,9 @@ gulp.task('default', ['sass','minify-css', 'minify-html']);
 
 9、 js文件压缩
 -----
-使用gulp-uglify
-安装：```npm install --save-dev gulp-uglify```
-用来压缩js文件，使用的是uglify引擎
+使用gulp-uglify<br>
+安装：```npm install --save-dev gulp-uglify```<br>
+用来压缩js文件，使用的是uglify引擎<br>
 ```var gulp = require('gulp');
 var rename = require("gulp-rename");
 var uglify = require("gulp-uglify");
@@ -143,24 +143,24 @@ gulp.task('jsLint', function () {
 gulp.task('default', ['sass','minify-css', 'minify-html','minify-js','jsLint']);
 ```
 
-运行gulp jsLint时，可能会出现下面的问题
+运行gulp jsLint时，可能会出现下面的问题<br>
 
 ```Gulp Error: Cannot find module 'jshint/src/cli'```
 
-问题原因：
-插件安装不完全，新版本gulp做了一些调整好像。。。。
+问题原因：<br>
+插件安装不完全，新版本gulp做了一些调整好像。。。。<br>
 
 
-解决方法：
-使用```npm install --save-dev jshint gulp-jshint```
-而不是npm install --save-dev gulp-jshint
+解决方法：<br>
+使用```npm install --save-dev jshint gulp-jshint```<br>
+而不是npm install --save-dev gulp-jshint<br>
 
 11、合并css
 -----
-// css文件合并
-使用gulp-concat
-安装：```npm install --save-dev gulp-concat```
-用来把多个文件合并为一个文件,我们可以用它来合并js或css文件等，这样就能减少页面的http请求数了
+// css文件合并<br>
+使用gulp-concat<br>
+安装：```npm install --save-dev gulp-concat```<br>
+用来把多个文件合并为一个文件,我们可以用它来合并js或css文件等，这样就能减少页面的http请求数了<br>
 
 ```var gulp = require('gulp');
 var concat = require("gulp-concat");
@@ -181,10 +181,10 @@ gulp.task('default', ['sass','minify-css', 'minify-html','minify-js','jsLint','c
 
 12、合并js
 -----
- // js文件合并
-使用gulp-concat
-安装：```npm install --save-dev gulp-concat```
-用来把多个文件合并为一个文件,我们可以用它来合并js或css文件等，这样就能减少页面的http请求数了
+ // js文件合并<br>
+使用gulp-concat<br>
+安装：```npm install --save-dev gulp-concat```<br>
+用来把多个文件合并为一个文件,我们可以用它来合并js或css文件等，这样就能减少页面的http请求数了<br>
 
 ```var gulp = require('gulp');
 var concat = require("gulp-concat");
@@ -224,9 +224,9 @@ gulp.task('default', ['sass','minify-css', 'minify-html','minify-js','jsLint','c
 
 14、自动刷新
 -----
-使用gulp-livereload插件，安装:```npm install --save-dev gulp-livereload```。
-当代码变化时，它可以帮我们自动刷新页面
-该插件最好配合谷歌浏览器来使用，且要安装livereload chrome extension扩展插件,不能下载的请自行FQ。
+使用gulp-livereload插件，安装:```npm install --save-dev gulp-livereload```。<br>
+当代码变化时，它可以帮我们自动刷新页面<br>
+该插件最好配合谷歌浏览器来使用，且要安装livereload chrome extension扩展插件,不能下载的请自行FQ。<br>
 ```// 在命令行输入 gulp watch 启动此任务
 可以用idea见http服务器，点击为实心就可以自动刷新了
 // 自动刷新
