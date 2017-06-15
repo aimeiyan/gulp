@@ -63,7 +63,9 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('dist/css'))  //编译后自动保存的路径
 });
 
-gulp.task('default', ['sass']);```
+gulp.task('default', ['sass']);
+```
+
 7、css压缩
 -----
 安装：npm install --save-dev gulp-rename
