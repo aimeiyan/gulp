@@ -67,8 +67,7 @@ gulp.task('default', ['sass']);```
 7、css压缩
 -----
 安装：npm install --save-dev gulp-rename
-```
-var gulp = require('gulp');
+```var gulp = require('gulp');
 var rename = require("gulp-rename");
 
 var minifyCss = require("gulp-minify-css");
@@ -89,8 +88,7 @@ gulp.task('default', ['sass','minify-css']);
 -----
 使用gulp-minify-html
 安装：npm install --save-dev gulp-minify-html  用来压缩html文件
-```
-var gulp = require('gulp');
+```var gulp = require('gulp');
 var rename = require("gulp-rename");
 var minifyHtml = require("gulp-minify-html");
 
@@ -112,8 +110,7 @@ gulp.task('default', ['sass','minify-css', 'minify-html']);
 使用gulp-uglify
 安装：```npm install --save-dev gulp-uglify```
 用来压缩js文件，使用的是uglify引擎
-```
-var gulp = require('gulp');
+```var gulp = require('gulp');
 var rename = require("gulp-rename");
 var uglify = require("gulp-uglify");
 
@@ -133,8 +130,7 @@ gulp.task('default', ['sass','minify-css', 'minify-html','minify-js']);
 
 10、 js代码检查
 -----
-```
-var gulp = require('gulp');
+```var gulp = require('gulp');
 var jsLint = require("gulp-jshint");
 gulp.task('jsLint', function () {
     gulp.src('dist/js/*.js')
@@ -163,8 +159,7 @@ gulp.task('default', ['sass','minify-css', 'minify-html','minify-js','jsLint']);
 安装：```npm install --save-dev gulp-concat```
 用来把多个文件合并为一个文件,我们可以用它来合并js或css文件等，这样就能减少页面的http请求数了
 
-```
-var gulp = require('gulp');
+```var gulp = require('gulp');
 var concat = require("gulp-concat");
 var order = require("gulp-order");
 
@@ -188,8 +183,7 @@ gulp.task('default', ['sass','minify-css', 'minify-html','minify-js','jsLint','c
 安装：```npm install --save-dev gulp-concat```
 用来把多个文件合并为一个文件,我们可以用它来合并js或css文件等，这样就能减少页面的http请求数了
 
-```
-var gulp = require('gulp');
+```var gulp = require('gulp');
 var concat = require("gulp-concat");
 var order = require("gulp-order");
 
@@ -210,8 +204,7 @@ gulp.task('default', ['sass','minify-css', 'minify-html','minify-js','jsLint','c
 ```npm install --save-dev gulp-imagemin```
 ```npm install --save-dev imagemin-pngquant```
 
-```
-var gulp = require('gulp');
+```var gulp = require('gulp');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant'); //png图片压缩插件
 
@@ -231,8 +224,7 @@ gulp.task('default', ['sass','minify-css', 'minify-html','minify-js','jsLint','c
 使用gulp-livereload插件，安装:```npm install --save-dev gulp-livereload```。
 当代码变化时，它可以帮我们自动刷新页面
 该插件最好配合谷歌浏览器来使用，且要安装livereload chrome extension扩展插件,不能下载的请自行FQ。
-```
-// 在命令行输入 gulp watch 启动此任务
+```// 在命令行输入 gulp watch 启动此任务
 可以用idea见http服务器，点击为实心就可以自动刷新了
 // 自动刷新
 // refresh-sass和watch，chrome浏览器安装
@@ -253,8 +245,7 @@ gulp.task('default', ['sass','minify-css', 'minify-html','minify-js','jsLint','c
 ```
 15、监听sass编译任务
 -----
-```
-// 在命令行使用 gulp auto 启动此任务
+```// 在命令行使用 gulp auto 启动此任务
 gulp.task('auto', function () {
     // 监听文件修改，当文件被修改则执行此任务
     gulp.watch('dist/sass/*.scss', ['sass']);
